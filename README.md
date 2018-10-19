@@ -7,6 +7,10 @@
 <pre>
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/profile_from_awr.sql'>profile_from_awr.sql</a> - create a SQL Profile from plan in AWR
 </pre>
+<h3>APEX: Anything to do with Apex</h3>
+<pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/apex-version.sql'>apex-version.sql</a> - Get the version of Apex. For CDB/PDB, run from both.
+</pre>
 <h3>LIB ADMIN:</h3>
 <pre>
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/distribution.sh'>distribution.sh</a> - the script that builds the linux tar and windows zips files
@@ -15,6 +19,8 @@
 <pre>
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rman-bkup-status.sql'>rman-bkup-status.sql</a> - Status of backups
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rman-bkup-details.sql'>rman-bkup-details.sql</a> - Details for a backup set
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rman-recovery-scn.sql'>rman-recovery-scn.sql</a> - determine the SCN from which the database must be restored and recovered
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rman-recovery-min-scn.sql'>rman-recovery-min-scn.sql</a> - determine minimum restore and recover SCN values
 </pre>
 <h3>PARALLEL PROCESSING:</h3>
 <pre>
@@ -62,6 +68,7 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_fk_from-11.2.sql'>gen_fk_from-11.2.sql</a> - generate existing foreign key constraings from data dictionary
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_fk_to-11.1.sql'>gen_fk_to-11.1.sql</a> - generate existing foreign key constraings from data dictionary
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_fk_to-11.2.sql'>gen_fk_to-11.2.sql</a> - generate existing foreign key constraings from data dictionary
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_data_with_recursion.sql'>gen_data_with_recursion.sql</a> - use a recursive subfactored query to generate rows
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_list_data_with_dual.sql'>gen_list_data_with_dual.sql</a> - generating test data with dual
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_list_data_without_dual.sql'>gen_list_data_without_dual.sql</a> - generating test data without dual - 10g+
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/set_events.sql'>set_events.sql</a> - various methods to set events, including per sql_id
@@ -208,6 +215,11 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rowlock-sqlid-counts.sql'>rowlock-sqlid-counts.sql</a> - count of rowlock enq by sqlid
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rowlock-sqlid-hist.sql'>rowlock-sqlid-hist.sql</a> - count of rowlock enq by sqlid - full outer join on snapshot
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/session-history.sql'>session-history.sql</a> - history of sessions from dba_hist_active_sess_history
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-count-ash.sql'>sql-count-ash.sql</a> - count of number rows in ASH per SQL_ID
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-counts-fms.sql'>sql-counts-fms.sql</a> - get sql_id where there are 2+ sql_id per force_matching signature from ASH/AWR
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-counts.sql'>sql-counts.sql</a> - simple count of SQL_ID from ASH/ASH
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-exe-events-ash.sql'>sql-exe-events-ash.sql</a> - show events per execution of SQL_ID in ASH
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-exe-events-awr.sql'>sql-exe-events-awr.sql</a> - show events per execution of SQL_ID in AWR
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-exe-times-ash.sql'>sql-exe-times-ash.sql</a> - stats and histograms of exucution times for a SQL_ID
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-exe-times-awr.sql'>sql-exe-times-awr.sql</a> - stats and histograms of exucution times for a SQL_ID for past 30 days
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-plans.sql'>sql-plans.sql</a> - Show plans used by a selected SQL for a date and time range
@@ -295,6 +307,7 @@
 </pre>
 <h3>PL/SQL:</h3>
 <pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/bulk-collect-1.sql'>bulk-collect-1.sql</a> - demo of fetch .. bulk collect into
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/raise_error.sql'>raise_error.sql</a> - raise any error in the database
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/get_table_lock.sql'>get_table_lock.sql</a> - runs a tight loop trying to acquire lock on table - use on busy systems to get the lock required - DO NOT LEAVE TABLE LOCKED!
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sqlplus_return_code.sql'>sqlplus_return_code.sql</a> - examples of exiting SQLPlus with an error code
@@ -330,6 +343,7 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/partstats_sum.sql'>partstats_sum.sql</a> - Summary of partition stats
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sampled_size.sql'>sampled_size.sql</a> - show sample size used to collect stats
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sampled_size_details.sql'>sampled_size_details.sql</a> - show sample size used to collect stats
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/session-cursor-metrics.sql'>session-cursor-metrics.sql</a> - show histograms for open and cached cursors
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/set_avg_stats.sql'>set_avg_stats.sql</a> - set average stats on empty partitions - uses table_list.sql
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/set_table_prefs.sql'>set_table_prefs.sql</a> - set table preferences - uses table_list.sql
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/show_os_stats.sql'>show_os_stats.sql</a> - Show stats from v$aux_stats$
@@ -383,6 +397,8 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/archived_log_sums.sql'>archived_log_sums.sql</a> - show rolling total of archive logs for N days
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/archived_log_dest.sql'>archived_log_dest.sql</a> - show archived log destination and status for active destinations
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/bct_status.sql'>bct_status.sql</a> - show status of block change tracking file
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/colcomm.sql'>colcomm.sql</a> - show columns in common between a set of tables in a CSV list
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/csv-split.sql'>csv-split.sql</a> - Demo of using recursive subfactored query to split CSV list from sqlplus command line
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/iot_segments.sql'>iot_segments.sql</a> - show segments for IOT objects. These are actually index segments
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/db_corrupt.sql'>db_corrupt.sql</a> - report on corrupt database blocks and objects
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dba_dependencies.sql'>dba_dependencies.sql</a> - find all dependencies for owner/object
@@ -459,6 +475,8 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/showsrc.sql'>showsrc.sql</a> - show source of PL/SQL stored objects
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/show-x-dollar-tables.sql'>show-x-dollar-tables.sql</a> - list of all x$tables
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql-version-counts.sql'>sql-version-counts.sql</a> - top 10 count of versions of SQL_ID
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/tabcols.sql'>tabcols.sql</a> - list of columns in alpha order for owner and table_name
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/tabidx.sql'>tabidx.sql</a> - show indexes and columns for owner and table_name
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/plsql_called_objects.sql'>plsql_called_objects.sql</a> - Shows entry PL/SQL object and current PL/SQL object for a session
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rbs_no_optimal.sql'>rbs_no_optimal.sql</a> - Set all rollback segments to have no OPTIMAL size
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/rbs_optimal.sql'>rbs_optimal.sql</a> - Set all rollback segments to have an OPTIMAL size of 2xInitial
@@ -476,6 +494,8 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/reverse_role_lookup.sql'>reverse_role_lookup.sql</a> - Find all users granted a role
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/undo-active.sql'>undo-active.sql</a> - Show active undo blocks - RAC aware
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/undo-active-12c.sql'>undo-active-12c.sql</a> - Show active undo blocks in 12c - RAC aware
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/undo-mon-fast.sql'>undo-mon-fast.sql</a> - monitor undo from v$fast_start_transactions - useful for when a proccess/session has been killed
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/undo-mon-trans.sql'>undo-mon-trans.sql</a> - monitor rollback for transactions
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/wait_chains.sql'>wait_chains.sql</a> - Troubleshooting Database Contention With V$Wait_Chains (Doc ID 1428210.1)
 </pre>
 <h3>SNAPSHOTS and MATERIALIZED_VIEWS:</h3>
@@ -552,6 +572,8 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/job_submit.sql'>job_submit.sql</a> - controlling run_time of dbms_jobs
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/e2ts.sql'>e2ts.sql</a> - Convert epoch value to oracle timestamp
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/e2ts-hires.sql'>e2ts-hires.sql</a> - Convert epoch value to oracle timestamp
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/timestamp-trunc.sql'>timestamp-trunc.sql</a> - demonstrates how to truncate a timestamp to remove the time portion
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/timestamp-types.sql'>timestamp-types.sql</a> - simple demo of timestamp data types via dump()
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ts2e.sql'>ts2e.sql</a> - Convert oracle timestamp to epoch value
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ts2e-hires.sql'>ts2e-hires.sql</a> - Convert oracle timestamp to epoch value
 </pre>
@@ -579,6 +601,10 @@
 <h3>12c: Scripts that are specific to Oracle 12c</h3>
 <pre>
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/show_container.sql'>show_container.sql</a> - display the current container database name
+</pre>
+<h3>XML: Scripts for use with XML and or XMLDB</h3>
+<pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/xmldb-status.sql'>xmldb-status.sql</a> - check status of XMLDB
 </pre>
 </body>
 </html>

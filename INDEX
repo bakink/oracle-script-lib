@@ -3,6 +3,8 @@ TUNING: scripts to aid with tuning
 
 @profile_from_awr.sql: create a SQL Profile from plan in AWR
 
+APEX: Anything to do with Apex
+@apex-version.sql: Get the version of Apex.  For CDB/PDB, run from both.
 
 LIB ADMIN:
 @distribution.sh: the script that builds the linux tar and windows zips files
@@ -10,6 +12,8 @@ LIB ADMIN:
 BACKUP and RECOVERY:
 @rman-bkup-status.sql: Status of backups
 @rman-bkup-details.sql: Details for a backup set
+@rman-recovery-scn.sql: determine the SCN from which the database must be restored and recovered 
+@rman-recovery-min-scn.sql: determine minimum restore and recover SCN values
 
 PARALLEL PROCESSING:
 
@@ -59,6 +63,7 @@ RDBMS UTILITIES:
 @gen_fk_from-11.2.sql: generate existing foreign key constraings from data dictionary
 @gen_fk_to-11.1.sql: generate existing foreign key constraings from data dictionary
 @gen_fk_to-11.2.sql: generate existing foreign key constraings from data dictionary
+@gen_data_with_recursion.sql: use a recursive subfactored query to generate rows
 @gen_list_data_with_dual.sql: generating test data with dual
 @gen_list_data_without_dual.sql: generating test data without dual - 10g+
 @set_events.sql: various methods to set events, including per sql_id
@@ -205,6 +210,11 @@ AWR/ASH:
 @rowlock-sqlid-counts.sql: count of rowlock enq by sqlid
 @rowlock-sqlid-hist.sql: count of rowlock enq by sqlid - full outer join on snapshot
 @session-history.sql: history of sessions from dba_hist_active_sess_history
+@sql-count-ash.sql: count of number rows in ASH per SQL_ID
+@sql-counts-fms.sql: get sql_id where there are 2+ sql_id per force_matching signature from ASH/AWR
+@sql-counts.sql: simple count of SQL_ID from ASH/ASH
+@sql-exe-events-ash.sql: show events per execution of SQL_ID in ASH
+@sql-exe-events-awr.sql: show events per execution of SQL_ID in AWR
 @sql-exe-times-ash.sql: stats and histograms of exucution times for a SQL_ID
 @sql-exe-times-awr.sql: stats and histograms of exucution times for a SQL_ID for past 30 days
 @sql-plans.sql: Show plans used by a selected SQL for a date and time range
@@ -294,6 +304,7 @@ EXECUTION_PLAN:
 
 PL/SQL:
 
+@bulk-collect-1.sql: demo of fetch .. bulk collect into
 @raise_error.sql: raise any error in the database
 @get_table_lock.sql:  runs a tight loop trying to acquire lock on table - use on busy systems to get the lock required - DO NOT LEAVE TABLE LOCKED!
 @sqlplus_return_code.sql: examples of exiting SQLPlus with an error code
@@ -328,6 +339,7 @@ DATABASE STATISTICS - DBMS_STATS - OPTIMIZER:
 @partstats_sum.sql: Summary of partition stats
 @sampled_size.sql:  show sample size used to collect stats
 @sampled_size_details.sql:  show sample size used to collect stats
+@session-cursor-metrics.sql: show histograms for open and cached cursors
 @set_avg_stats.sql: set average stats on empty partitions - uses table_list.sql
 @set_table_prefs.sql:  set table preferences - uses table_list.sql
 @show_os_stats.sql: Show stats from v$aux_stats$
@@ -380,6 +392,8 @@ INSTANCE and/or DATABASE:
 @archived_log_sums.sql: show rolling total of archive logs for N days
 @archived_log_dest.sql: show archived log destination and status for active destinations
 @bct_status.sql: show status of block change tracking file
+@colcomm.sql: show columns in common between a set of tables in a CSV list
+@csv-split.sql: Demo of using recursive subfactored query to split CSV list from sqlplus command line
 @iot_segments.sql: show segments for IOT objects. These are actually index segments
 @db_corrupt.sql: report on corrupt database blocks and objects
 @dba_dependencies.sql: find all dependencies for owner/object
@@ -456,6 +470,8 @@ INSTANCE and/or DATABASE:
 @showsrc.sql: show source of PL/SQL stored objects
 @show-x-dollar-tables.sql: list of all x$tables
 @sql-version-counts.sql: top 10 count of versions of SQL_ID
+@tabcols.sql: list of columns in alpha order for owner and table_name
+@tabidx.sql: show indexes and columns for owner and table_name
 @plsql_called_objects.sql: Shows entry PL/SQL object and current PL/SQL object for a session
 @rbs_no_optimal.sql: Set all rollback segments to have no OPTIMAL size
 @rbs_optimal.sql: Set all rollback segments to have an OPTIMAL size of 2xInitial
@@ -473,6 +489,8 @@ INSTANCE and/or DATABASE:
 @reverse_role_lookup.sql: Find all users granted a role
 @undo-active.sql:  Show active undo blocks - RAC aware
 @undo-active-12c.sql:  Show active undo blocks in 12c - RAC aware
+@undo-mon-fast.sql: monitor undo from v$fast_start_transactions - useful for when a proccess/session has been killed
+@undo-mon-trans.sql: monitor rollback for transactions
 @wait_chains.sql: Troubleshooting Database Contention With V$Wait_Chains (Doc ID 1428210.1)
 
 SNAPSHOTS and MATERIALIZED_VIEWS:
@@ -549,6 +567,8 @@ DATES: Dates and Date Math
 @job_submit.sql: controlling run_time of dbms_jobs
 @e2ts.sql: Convert epoch value to oracle timestamp
 @e2ts-hires.sql: Convert epoch value to oracle timestamp
+@timestamp-trunc.sql: demonstrates how to truncate a timestamp to remove the time portion
+@timestamp-types.sql: simple demo of timestamp data types via dump()
 @ts2e.sql: Convert oracle timestamp to epoch value
 @ts2e-hires.sql: Convert oracle timestamp to epoch value
 
@@ -575,9 +595,12 @@ METRICS: Metrics reported by oracle - v$sysmetric, v$sysmetric_history ...
 @os-load.sql: OS Load as reported by oracle for past hour
 
 
-
 12c: Scripts that are specific to Oracle 12c
 @show_container.sql: display the current container database name
+
+XML: Scripts for use with XML and or XMLDB
+
+@xmldb-status.sql: check status of XMLDB
 
 #################
 
