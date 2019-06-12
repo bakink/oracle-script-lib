@@ -153,8 +153,6 @@ WAITS/LOCKS/LATCHES and PERFORMANCE:
 @dba_kgllock.sql: show waiters/blockers on library cache locks.
 @libcachepin_waits.sql: if there are waits on Library Cache Pin in v$session_wait this script will show what the waits are for, and which session is causing them
 @mystat.sql: query v$mystat
-@snapper.sql: Tanel Poder script extraordinaire
-@snapper4.sql: Tanel Poder script extraordinaire - version 4
 
 AWR/ASH:
 @aas-calc.sql: dump calculated AAS to CSV file
@@ -224,7 +222,6 @@ AWR/ASH:
 @wsqlmon.sql: Provide SQL-Monitor like report from AWR - based on Tanel Poder script for ASH
 
 STATSPACK:
-
 
 @statspack-tables.txt: not a script - just a description of statspack tables
 @snapNmin.sql: start level 7 snapshot, sleep 2 minutes, complete snapshot and create report
@@ -305,14 +302,17 @@ EXECUTION_PLAN:
 PL/SQL:
 
 @bulk-collect-1.sql: demo of fetch .. bulk collect into
-@raise_error.sql: raise any error in the database
+@dbms_output-abstracted.sql: abstracted procedures and functions for dbms_output
 @get_table_lock.sql:  runs a tight loop trying to acquire lock on table - use on busy systems to get the lock required - DO NOT LEAVE TABLE LOCKED!
+@raise_error.sql: raise any error in the database
 @sqlplus_return_code.sql: examples of exiting SQLPlus with an error code
 @sqlplus_return_code_2.sql: more examples of exiting SQLPlus with an error cod
 @user_exit.sql: an example of exiting sqlplus if the current user is not the one expected
 
 DATABASE STATISTICS - DBMS_STATS - OPTIMIZER:
+
 @chk4incremental.sql: check to see if incremental stats were gathered for a table
+@cursor-check.sql: some detail on open cursors per session
 @cursor-counts.sql: simple report on cursors with count of child cursors
 @cursor-invalidation-reasons.sql: show reasons for cursor invalidation from v$sql_shared_cursor
 @dbms_stats_get_prefs.sql: get stats prefs per table and indexes

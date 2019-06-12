@@ -157,8 +157,6 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dba_kgllock.sql'>dba_kgllock.sql</a> - show waiters/blockers on library cache locks.
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/libcachepin_waits.sql'>libcachepin_waits.sql</a> - if there are waits on Library Cache Pin in v$session_wait this script will show what the waits are for, and which session is causing them
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/mystat.sql'>mystat.sql</a> - query v$mystat
-<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/snapper.sql'>snapper.sql</a> - Tanel Poder script extraordinaire
-<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/snapper4.sql'>snapper4.sql</a> - Tanel Poder script extraordinaire - version 4
 </pre>
 <h3>AWR/ASH:</h3>
 <pre>
@@ -308,8 +306,9 @@
 <h3>PL/SQL:</h3>
 <pre>
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/bulk-collect-1.sql'>bulk-collect-1.sql</a> - demo of fetch .. bulk collect into
-<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/raise_error.sql'>raise_error.sql</a> - raise any error in the database
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dbms_output-abstracted.sql'>dbms_output-abstracted.sql</a> - abstracted procedures and functions for dbms_output
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/get_table_lock.sql'>get_table_lock.sql</a> - runs a tight loop trying to acquire lock on table - use on busy systems to get the lock required - DO NOT LEAVE TABLE LOCKED!
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/raise_error.sql'>raise_error.sql</a> - raise any error in the database
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sqlplus_return_code.sql'>sqlplus_return_code.sql</a> - examples of exiting SQLPlus with an error code
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sqlplus_return_code_2.sql'>sqlplus_return_code_2.sql</a> - more examples of exiting SQLPlus with an error cod
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/user_exit.sql'>user_exit.sql</a> - an example of exiting sqlplus if the current user is not the one expected
@@ -317,6 +316,7 @@
 <h3>DATABASE STATISTICS - DBMS_STATS - OPTIMIZER:</h3>
 <pre>
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/chk4incremental.sql'>chk4incremental.sql</a> - check to see if incremental stats were gathered for a table
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/cursor-check.sql'>cursor-check.sql</a> - some detail on open cursors per session
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/cursor-counts.sql'>cursor-counts.sql</a> - simple report on cursors with count of child cursors
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/cursor-invalidation-reasons.sql'>cursor-invalidation-reasons.sql</a> - show reasons for cursor invalidation from v$sql_shared_cursor
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dbms_stats_get_prefs.sql'>dbms_stats_get_prefs.sql</a> - get stats prefs per table and indexes
