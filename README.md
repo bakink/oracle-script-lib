@@ -50,6 +50,7 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/nls_date_format.sql'>nls_date_format.sql</a> - set custom date and time formats, several options available at runtime
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/nls_time_format.sql'>nls_time_format.sql</a> - set custom (fixed) date and time formats
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/spool_example.sql'>spool_example.sql</a> -
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/scott.sql'>scott.sql</a> - create the scott tables
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/sql_trick_1.sql'>sql_trick_1.sql</a> - demonstrates a very useful technique for conditionally executing SQL
 </pre>
 <h3>RDBMS UTILITIES:</h3>
@@ -276,6 +277,7 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/check_events.sql'>check_events.sql</a> - Determine if any events are set in database
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/getallparm.sql'>getallparm.sql</a> - get parameters including hidden
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/getparm.sql'>getparm.sql</a> - get parameters
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/parm-hist-diff.sql'>parm-hist-diff.sql</a> - show difference in parameters from AWR
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/showallparm.sql'>showallparm.sql</a> - Show all database parameters, including .hidden. parameters
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/showparm.sql'>showparm.sql</a> - Show database parameters
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/showparmchanges.sql'>showparmchanges.sql</a> - show parameters that have changed - uses AWR
@@ -363,6 +365,10 @@
 </pre>
 <h3>AUTOTASK and SCHEDULER:</h3>
 <pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_auto_stats_disable.sql'>autotask_auto_stats_disable.sql</a> - disable automatic stats gathering
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_auto_stats_enable.sql'>autotask_auto_stats_enable.sql</a> - enable automatic stats gathering
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_auto_tasks_disable.sql'>autotask_auto_tasks_disable.sql</a> - disable all autotasks
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_auto_tasks_enable.sql'>autotask_auto_tasks_enable.sql</a> - enable all autotasks
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_client_attributes.sql'>autotask_client_attributes.sql</a> - call dbms_auto_task_admin.get_client_attributes
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_client_history.sql'>autotask_client_history.sql</a> - show dba_autotask_client_history
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_client_job.sql'>autotask_client_job.sql</a> - show dba_autotask_client_job
@@ -377,7 +383,6 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/autotask_window_hist.sql'>autotask_window_hist.sql</a> - show dba_autotask_window_history
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dba_sched_jobs.sql'>dba_sched_jobs.sql</a> - show dba_scheduler_jobs
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dba_sched_jobs_hist.sql'>dba_sched_jobs_hist.sql</a> - show scheduler jobs history
-<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/disable_resource_manager.sql'>disable_resource_manager.sql</a> - the right method to disable the resource manager
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/opthist.sql'>opthist.sql</a> - show values of dba_stats prefs from the source table
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/schedcols.sql'>schedcols.sql</a> - col commands for scripts
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/scheduler_programs.sql'>scheduler_programs.sql</a> - show dba_scheduler_programs
@@ -389,6 +394,20 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/tz_set.sql'>tz_set.sql</a> - set the nls_timezone_tz_format for autotask scripts
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/get_sched_tz.sql'>get_sched_tz.sql</a> - get the default timezone for the scheduler
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/set_sess_tz.sql'>set_sess_tz.sql</a> - set session timezone the same as scheduler default timezone
+</pre>
+<h3>RESOURCE MANAGER:</h3>
+<pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/disable_resource_manager.sql'>disable_resource_manager.sql</a> - the correct method to disable the resource manager
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-columns.sql'>resmgr-columns.sql</a> - configure report columns
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-consumer-groups.sql'>resmgr-consumer-groups.sql</a> - show consumer groups
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-group-privs.sql'>resmgr-group-privs.sql</a> - show group privs
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-plan-directives.sql'>resmgr-plan-directives.sql</a> - show resource manager plan directives
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-resource-plans.sql'>resmgr-resource-plans.sql</a> - show resource manager plans
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-setup.sql'>resmgr-setup.sql</a> - set pagesize and linesizes
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-user-consumer-groups.sql'>resmgr-user-consumer-groups.sql</a> - show consumer group per user
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-waits-pdb.sql'>resmgr-waits-pdb.sql</a> - show resmgr waits per pdb
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-waits.sql'>resmgr-waits.sql</a> - show resmgr waits
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/resmgr-who.sql'>resmgr-who.sql</a> - show resmgr waits per user
 </pre>
 <h3>INSTANCE and/or DATABASE:</h3>
 <pre>
@@ -601,8 +620,10 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/metric-names.sql'>metric-names.sql</a> - detail of metrics reported along with collection intervals
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/os-load.sql'>os-load.sql</a> - OS Load as reported by oracle for past hour
 </pre>
-<h3>12c: Scripts that are specific to Oracle 12c</h3>
+<h3>CDB-PDB: Scripts that are specific to Container and Pluggable databases</h3>
 <pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/pdb-modifiable-params-dump.sql'>pdb-modifiable-params-dump.sql</a> - Dump the parameters from v$system_parameter on the CDB
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/cdb_sched_jobs.sql'>cdb_sched_jobs.sql</a> - show all scheduler jobs from CDB Root Level
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/show_container.sql'>show_container.sql</a> - display the current container database name
 </pre>
 <h3>XML: Scripts for use with XML and or XMLDB</h3>
