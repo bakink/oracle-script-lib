@@ -1,4 +1,6 @@
 
+
+
 TUNING: scripts to aid with tuning
 
 @profile_from_awr.sql: create a SQL Profile from plan in AWR
@@ -69,12 +71,13 @@ RDBMS UTILITIES:
 @dump.sql: Dump a table to a CSV file, generate SQL Loader parameter and control files.
 @find-index-sql.sql: find SQL where an index has been used - uses AWR
 @gen_data_with_recursion.sql: use a recursive subfactored query to generate rows
-@gen_fk_from-11.1.sql: generate existing foreign key constraings from data dictionary
-@gen_fk_from-11.2.sql: generate existing foreign key constraings from data dictionary
-@gen_fk_to-11.1.sql: generate existing foreign key constraings from data dictionary
-@gen_fk_to-11.2.sql: generate existing foreign key constraings from data dictionary
+@gen_fk_from-11.1.sql: generate existing foreign key constraints from data dictionary
+@gen_fk_from-11.2.sql: generate existing foreign key constraints from data dictionary
+@gen_fk_to-11.1.sql: generate existing foreign key constraints from data dictionary
+@gen_fk_to-11.2.sql: generate existing foreign key constraints from data dictionary
 @gen_list_data_with_dual.sql: generating test data with dual
 @gen_list_data_without_dual.sql: generating test data without dual - 10g+
+@hash-function.sql: create a PL/SQL package 'hash' containing digest functions using dbms_crypto
 @hwm-df.sql: Find the high water mark for each datafile and determine how much each file can be shrunk
 @oradebug_doc.sql: dump the documentation for oradebug
 @print_table_2.sql: Tom Kytes print_table, but as an anonymous block
@@ -113,6 +116,7 @@ IO:
 @io_tbs.sql: Shows snapshot of IO stats based on io_begin and io_end
 @lfsdiag.sql: diagnose logfile sync
 @ioweight.sql: Show IO per tablespace order by weight
+@redo-rate.sql: show real time redo rates at the db level
 @showtrans.sql: Show current transactions with IO
 @trans_per_hour.sql: Transactions per hour with statistics per xaction
 
@@ -155,8 +159,10 @@ WAITS/LOCKS/LATCHES and PERFORMANCE:
 @mystat.sql: query v$mystat
 
 AWR/ASH:
-@aas-calc.sql: dump calculated AAS to CSV file
-@aas-std.sql: dump AAS to CSV file
+@aas.sql: get AAS (average active sessions) from gv$sysmetric
+@aas-awr-calc.sql: dump AAS calculated from AWR to CSV file
+@aas-ash-calc.sql: report AAS calculated from ASH
+@aas-std.sql: dump AAS from dba_hist_sysmetric_history to CSV file
 @aas_hist_metrics.sql: get average active sessions along with CPU metrics
 @aas_history.sql: get history of Average Active Sessions
 @ash-blocker-waits.sql: find top level blockers in ASH
@@ -270,6 +276,7 @@ USERS LOGGED ON:
 PARAMETERS:
 
 @check_events.sql: Determine if any events are set in database
+@get-alert-log-location.sql: return the filename for the text based alert log file
 @getallparm.sql:  get parameters including hidden
 @getparm.sql: get parameters
 @parm-hist-diff.sql: show difference in parameters from AWR
@@ -278,7 +285,9 @@ PARAMETERS:
 @showparmchanges.sql: show parameters that have changed - uses AWR
 @showparmdrvr.sql: Performs the query for getparm.sql and showparm.sql
 @showallparm73drvr.sql: Performs the query for getallparm.sql and showallparm.sql
+@showallparm12c-drvr.sql: 12c update for all parms
 @parms_dump_csv.sql: Dump all parameters to CSV file
+@parms_dump_12c_csv.sql: Dump all 12c parameters to CSV file
 @sys_context.sql: Demo of getting oracle environment settings with sys_context function
 
 EXECUTION_PLAN:
@@ -305,6 +314,7 @@ PL/SQL:
 @bulk-collect-1.sql: demo of fetch .. bulk collect into
 @dbms_output-abstracted.sql: abstracted procedures and functions for dbms_output
 @get_table_lock.sql:  runs a tight loop trying to acquire lock on table - use on busy systems to get the lock required - DO NOT LEAVE TABLE LOCKED!
+@package-error.sql: show the source lines for a PL/SQL error
 @raise_error.sql: raise any error in the database
 @sqlplus_return_code.sql: examples of exiting SQLPlus with an error code
 @sqlplus_return_code_2.sql: more examples of exiting SQLPlus with an error cod
@@ -411,8 +421,10 @@ INSTANCE and/or DATABASE:
 @archived_log_sums.sql: show rolling total of archive logs for N days
 @archived_log_dest.sql: show archived log destination and status for active destinations
 @bct_status.sql: show status of block change tracking file
+@blocker-tree.sql: show tree of blocked sessions
 @colcomm.sql: show columns in common between a set of tables in a CSV list
 @csv-split.sql: Demo of using recursive subfactored query to split CSV list from sqlplus command line
+@csv-split-2.sql: Demo of using regular expressions to conver a CSV list to rows - both SQL and PL/SQL
 @iot_segments.sql: show segments for IOT objects. These are actually index segments
 @db_corrupt.sql: report on corrupt database blocks and objects
 @dba_dependencies.sql: find all dependencies for owner/object
@@ -492,6 +504,7 @@ INSTANCE and/or DATABASE:
 @tabcols.sql: list of columns in alpha order for owner and table_name
 @tabidx.sql: show indexes and columns for owner and table_name
 @plsql_called_objects.sql: Shows entry PL/SQL object and current PL/SQL object for a session
+@plsql-init.sql: example initialization for PL/SQL flags
 @rbs_no_optimal.sql: Set all rollback segments to have no OPTIMAL size
 @rbs_optimal.sql: Set all rollback segments to have an OPTIMAL size of 2xInitial
 @rbs_shrink.sql: Shrink all rollback segments to OPTIMAL
@@ -597,6 +610,7 @@ DATES: Dates and Date Math
 MEMORY: Memory Settings and/or Advisors
 
 @db_cache_advice.sql: run db cache advisor
+@mem-leak-detect.sql: discover sessions that may be leaking memory
 @mem-subpool-mgt.sql: parameters used to manage memory subpools - requires SYSDBA
 @ora-4031-info-shared-pool.sql: displays several memory related configuration settings
 @pgacols.sql: column formatting
