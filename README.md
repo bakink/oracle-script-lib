@@ -81,6 +81,12 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_fk_to-11.2.sql'>gen_fk_to-11.2.sql</a> - generate existing foreign key constraints from data dictionary
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_list_data_with_dual.sql'>gen_list_data_with_dual.sql</a> - generating test data with dual
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gen_list_data_without_dual.sql'>gen_list_data_without_dual.sql</a> - generating test data without dual - 10g+
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gethostname.sql'>gethostname.sql</a> - get the hostname into substitution variable uhostname
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/getinstance.sql'>getinstance.sql</a> - get the instance name into substitution variable uinstance
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/getinstanceowner.sql'>getinstanceowner.sql</a> - get the instance owner into substitution variable uinstanceowner
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/getpid.sql'>getpid.sql</a> - get the session PID into substitution variable upid
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gettracefile.sql'>gettracefile.sql</a> - copy the current sessions tracefile from the host
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/gettrcname.sql'>gettrcname.sql</a> - get the name of the current sessions tracefile into substitution variable utracefile
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/hash-function.sql'>hash-function.sql</a> - create a PL/SQL package 'hash' containing digest functions using dbms_crypto
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/hwm-df.sql'>hwm-df.sql</a> - Find the high water mark for each datafile and determine how much each file can be shrunk
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/oradebug_doc.sql'>oradebug_doc.sql</a> - dump the documentation for oradebug
@@ -179,6 +185,8 @@
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ash_blocking.sql'>ash_blocking.sql</a> - get list of row lock blocks - blocked and blockers with SQL_ID
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ash_cpu_hist.sql'>ash_cpu_hist.sql</a> - cpu historic usage from dba_hist_sysmetric_history - 12c+
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ash_log_sync.sql'>ash_log_sync.sql</a> - log sync events
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ashdump.sql'>ashdump.sql</a> - create an ASH Dump - be sure to read the comments in the script
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ashdump-summary.sql'>ashdump-summary.sql</a> - example script to view ASHDUMP data
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/ashtop.sql'>ashtop.sql</a> - Tanel Poder script for top ASH events
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/awr-blocker-waits.sql'>awr-blocker-waits.sql</a> - find top level blockers in AWR
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/awr-cpu-stats.sql'>awr-cpu-stats.sql</a> - Report on sar like CPU stats from AWR
@@ -314,6 +322,7 @@
 </pre>
 <h3>PL/SQL:</h3>
 <pre>
+<a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/build-record.sql'>build-record.sql</a> - generate a PL/SQL record type based on table columns
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/bulk-collect-1.sql'>bulk-collect-1.sql</a> - demo of fetch .. bulk collect into
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/dbms_output-abstracted.sql'>dbms_output-abstracted.sql</a> - abstracted procedures and functions for dbms_output
 <a href='https://github.com/jkstill/oracle-script-lib/blob/master/sql/get_table_lock.sql'>get_table_lock.sql</a> - runs a tight loop trying to acquire lock on table - use on busy systems to get the lock required - DO NOT LEAVE TABLE LOCKED!
